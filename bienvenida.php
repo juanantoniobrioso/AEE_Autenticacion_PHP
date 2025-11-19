@@ -14,28 +14,38 @@
 
                     <?php
                     session_start();
-                    
-
-                    //Tiempo
                     date_default_timezone_set("Europe/Madrid");
+                    $usuarios = [
+                        ["Juan", "hola00"],
+                        ["Carlos", "Basulto123"],
+                        ["Louvre", "Louvre"]
+                    ]
 
-                    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                    if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                         $nomUsuario = htmlspecialchars($_POST['nomUsuario']);
-                        echo "<h1 class='mb-4'>¡Bienvenido $nomUsuario!</h1>";
-                        echo "<h3>Son las " . date("H:i") . "</h3>";
+                        $password = htmlspecialchars($_POST['password']);
 
-                        echo '<div class="text-center mt-5">
-                                <a href="logout.php" class="btn btn-danger btn-lg px-5 text-white">
-                                    Cerrar sesión
-                                </a>
-                            </div>';
+                        foreach($usuarios as $usuario){
+                            if($usuario[0] == $nomUsuario && $usuario[1] == $password){
+                                echo "<h1 class='mb-4'>¡Bienvenido $nomUsuario!</h1>";
+                                echo "<h3>Son las " . date("H:i") . "</h3>";
+
+                                echo '<div class="text-center mt-5">
+                                    <a href="logout.php" class="btn btn-danger btn-lg px-5 text-white">
+                                        Cerrar sesión
+                                    </a>
+                                </div>';
+                            }
+                        }
+
+                        
                         
                     } else {
                         echo "<div class='alert alert-danger text-center'>";
                         echo "<h1 class='display-4'>Acceso Denegado</h1>";
                         echo "<p>Debes iniciar sesión para ver esta página.</p>";
-                        echo "<a href='login.html' class='btn btn-primary'>Volver al inicio de sesión</a>";
+                        echo "<a href='login.php' class='btn btn-primary'>Volver al inicio de sesión</a>";
                         echo "</div>";
                     }
                     ?>
