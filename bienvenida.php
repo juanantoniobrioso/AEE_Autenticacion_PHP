@@ -19,7 +19,8 @@
                     $usuarios = [
                         ["Juan", "hola00"],
                         ["Carlos", "Basulto123"],
-                        ["Louvre", "Louvre"]
+                        ["Louvre", "Louvre"],
+                        ["Raul", "Garcia22"]
                     ];
                     $autenticado = false;
 
@@ -36,6 +37,7 @@
                         if($autenticado == true){
                             echo "<h1 class='mb-4'>¡Bienvenido $nomUsuario!</h1>";
                             echo "<h3>Son las " . date("H:i") . "</h3>";
+                            echo "<p>Muchas gracias por iniciar sesión en nuestra página $nomUsuario :)</p>";
 
                             echo '<div class="text-center mt-5">
                                 <a href="logout.php" class="btn btn-danger btn-lg px-5 text-white">

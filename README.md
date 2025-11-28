@@ -28,6 +28,9 @@ Contraseña: Basulto123
 Usuario: Louvre
 Contraseña: Louvre
 
+Usuario: Raul
+Contraseña: Garcia22
+
 ## Errores
 
 Me he dado cuenta que al actualizar la página (con F5) me pide volver a enviar el formulario 

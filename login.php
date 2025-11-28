@@ -27,7 +27,7 @@
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
                             </div>
 
-                            <!--El propio inicio de sesión-->
+                            <!--El botón para el propio inicio de sesión-->
                             <div class="text-center mt-5">
                                 <button type="submit" class="btn btn-info btn-lg px-5 text-white">
                                     Iniciar sesión
